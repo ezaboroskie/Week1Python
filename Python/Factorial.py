@@ -1,10 +1,21 @@
-while True:
-    number = int(input("Enter a Number: "))
-    factorial = 1
-    if number < 0: 
-        print ("A factorial does not exist for this number")
-    else:
-        for n in range (1, number + 1):
-            factorial = factorial*n
-        print("The factorial of", number, "is", factorial)
+
+def factorial(number):
+    result=1
+    for index in range(1, number+1):
+        result *= index
+    return result 
+    
+
+number = int(input("Please Enter a Number: "))
+
+if number < 0:
+    print("Factorial of that number does not exist.")
+
+elif number == 1:
+    print(1)
+
+else:
+    result = factorial(number)
+    print(result)
+
 
